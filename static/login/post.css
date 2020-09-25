@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css');
+
+
+[placeholder]::-webkit-input-placeholder { color: rgba(146, 146, 146, 0.8); font-weight: bold;  padding-left: 10px; padding-top: 5px;}
+[placeholder]:hover::-webkit-input-placeholder { color: rgba(131, 131, 131, 0.4); font-weight: bold;}
+[placeholder]:focus::-webkit-input-placeholder { color: transparent; }
+
+[placeholder]::-moz-placeholder { color: rgba(88, 88, 88, 0.8); font-weight: bold; padding-left: 10px; padding-top: 0px;}
+[placeholder]:hover::-moz-placeholder { color: rgba(160, 160, 160, 0.4); font-weight: bold;}
+[placeholder]:focus::-moz-placeholder { color: transparent; }
+
+[placeholder]:-ms-input-placeholder { color: rgba(121, 121, 121, 0.8); font-weight: bold; padding-left: 10px; padding-top: 0px;}
+[placeholder]:hover:-ms-input-placeholder { color: rgba(177, 177, 177, 0.4); font-weight: bold;}
+[placeholder]:focus:-ms-input-placeholder { color: transparent; }
+
+
+[placeholder]:-ms-submit-placeholder { color: rgba(121, 121, 121, 0.8); font-weight: bold; padding-left: 10px; padding-top: 0px;}
+
+
+.post_btn[type="submit"] {
+    display: block;
+    width: 100px;
+    height: 35px;
+    margin: 0 0 20px;
+    float: right;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,.5);
+    background: rgba(105, 105, 105, 0.25);
+    border-radius: 20px;
+    
+  }
+
+.post_btn_pos{
+    
+    padding-right: 10px;
+    padding-top: 0px;
+}
+
+.post_area {
+  display: block;
+  width: 400px;
+  height: 40px;
+  margin: 0 0 20px;
+  padding: 0;
+  padding-bottom: 5px;
+  border: 1px solid rgba(0,0,0,.5);
+  background: rgba(87, 87, 87, 0.25);
+  border-radius: 10px;
+}
+
+.profile_pos{
+    padding-left: 80px;
+    border-radius: 20px;
+}
