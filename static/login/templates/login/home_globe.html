@@ -1,0 +1,211 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'login/homepage.css' %}">
+    <link rel="stylesheet" href="{% static 'login/post.css' %}">
+    <link rel="stylesheet" href="{% static 'login/emoji/emojipanel.css' %}">
+   
+    <style>
+      body{
+        background-color: rgb(34, 33, 33);
+        color: rgb(133, 133, 133);
+        text-align: center;
+      }
+      .container{
+        background-color: rgb(46, 46, 46);
+        max-width: 800px;
+        height: 150px;
+        padding-top: 5px;
+      }
+      .nav-color{
+        background-color: rgb(46, 46, 46);
+      }
+      .search-box > .search-txt{
+        position: absolute;
+        top: 8px;
+        right: 5%;
+
+        background: rgb(66, 66, 66);
+        height: 40px;
+        border-radius: 40px;
+        float: right;
+        width: 240px;
+        padding: 0 6px;
+        }
+
+        .search-box-pos{
+            bottom: 0px;
+            float: right;
+        }
+      
+
+        .search-box:hover > .search-btn {
+        background: white;
+        color: black;
+        }
+
+        .search-btn {
+        color: #e84118;
+        position: absolute;
+        top: 8px;
+        right: 5%;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #202020;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
+        color: white;
+        cursor: pointer;
+        
+        }
+
+        .search-btn > i {
+        font-size: 30px;
+        }
+
+        .search-txt {
+        border: none;
+        background: none;
+        outline: none;
+        float: left;
+        padding: 0;
+        color: white;
+        font-size: 16px;
+        transition: 0.4s;
+        line-height: 40px;
+        width: 0px;
+        font-weight: bold;
+        }
+        
+        .left-nav{
+          position: absolute;
+          right: 57%;
+        }
+        .mid-nav{
+          position: absolute;
+          right: 50%;
+        }
+        .right-nav{
+          position: absolute;
+          right: 45%;
+        }
+
+        .nav-current{
+          border-bottom: 5px solid;
+          bottom: 0;
+        }
+        .post_box{
+            padding-top: 40px;
+            padding-left: 150px;
+
+        }
+        .textbox{
+            max-height: 200px;
+        }
+        
+        
+
+
+    </style>
+  </head>
+
+    <body>
+        <nav class="navbar sticky-top py-1 navbar-expand-lg navbar-light nav-color">
+        <a class="navbar-brand" href="#" style="color:lightblue; font-family: Cursive;" >somename</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#" style="color:gray" > <span class="sr-only">(current)</span>
+</a>
+            </li>
+            <li class="nave-less nav-item">
+              <a class="nav-link" style="color:gray" ><i class="fas fa-home"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'post' %}" style="color:gray" ><i class="fas fa-plus-square"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'chat' %}" style="color:gray" ><i class="fas fa-hot-tub"></i></a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'account' %}" style="color:gray" ><i class="fas fa-smile"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'account' %}" style="color:gray" ><i class="fas fa-user-alt"></i></a>
+            </li>
+            <li class="nav-item left-nav">
+              <a class="nav-link" href="{% url 'home' %}" style="color:gray; font-size: 20px; padding-top: 5px;"><b>Following</b></a>
+            </li>
+            <li class="nav-item mid-nav">
+              <a class="nav-link" href="{% url 'sub' %}" style="color:gray; font-size: 20px; padding-top: 5px;"><b>Subscibed</b></a>
+            </li>
+            <li class="nav-item right-nav nav-current">
+              <a class="nav-link" href="#" style="color:gray; font-size: 20px; padding-top: 5px; padding-bottom: 4px;"><b>Globe</b></a>
+            </li>
+            <li class="search-box-pos">
+                <form class="form-inline">
+                  <div class="search-box">
+                    <input type="text" name="" class="search-txt" placeholder="Find">
+                    <a class="search-btn">
+                    <img src="{% static 'login/images/1200px-Search_Noun_project_15028.png' %}" style="width: 20px;"></i>
+                    </a>
+                  </div>
+                
+                </form>
+            </li>
+          </ul>
+          
+        </div>
+      </nav>
+      <br>
+          <ul style="color: white;">
+            {% csrf_token %}
+            {% block content %}
+                {% for thing in things %}
+                    {{ thing.author }} : {{ thing.caption }}
+                {% endfor %}
+            {% endblock content %}
+          </ul>
+        </div>
+      </article>
+      
+
+
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/emoji-button@latest/dist/index.min.js"></script>
+      <script src="{% static 'login/emoji/emojipanel.js"></script>
+      <script>
+        window.onload = () => {
+            var trigger = new EmojiPanel({
+                container: '#container',
+                trigger: '#trigger',
+                pack_url: '/login/twemoji.svg'
+            });
+        };
+    </script>
+      
+
+    </body>
+</html>
